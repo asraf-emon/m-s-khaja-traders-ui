@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+.dark { color-scheme: dark; }
+
+html, body { max-width: 100%; }
+body { overflow-x: hidden; }
+
+a, button, summary {
+  transition-property: color, background-color, border-color, box-shadow, transform;
+  transition-duration: 180ms;
+  transition-timing-function: ease;
+}
+
+@media print {
+  .no-print { display: none !important; }
+  .mobile-cards { display: none !important; }
+  .ledger-table { display: table !important; width: 100% !important; }
+  body { background: white !important; color: black !important; }
+  aside, header { display: none !important; }
+}
